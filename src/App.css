@@ -1,38 +1,108 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+
+/* Add Book */
+.container {
+  height: 100vh;
+  margin-block: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  width: 40vw;
+  height: 80vh;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #c2c2c2;
+  border-radius: 10px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.input-field {
+  width: 30vw;
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #c2c2c2;
+  background-color: #f8f8f8;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.input-field:focus {
+  border: 1.5px solid #222222;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.btn {
+  padding: 15px 40px;
+  background-color: #015aa7;
+  color: #ffffff;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+
+
+/* Books */
+.book-container{
+  padding: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+
+
+/* Book Card */
+.book-card{
+  width: 270px;
+  height: 400px;
+  padding-block: 10px;
+  border: 1px solid #a2a2a2;
+  text-align: center;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+img{
+  width: 200px;
+  height: 250px;
+  object-fit: cover;
+  background-color: #f8f8f8;
+  border: 1px solid rgb(188, 185, 185);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.update, .delete{
+  padding: 10px 20px;
+  margin: 5px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: #ffffff;
+}
+
+.update{
+  border: 1px solid #015aa7;
+  color: #015aa7;
+}
+
+.delete{
+  border: 1px solid #ff0000;
+  color: #ff0000;
 }
