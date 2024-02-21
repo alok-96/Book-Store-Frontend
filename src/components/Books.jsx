@@ -7,16 +7,17 @@ const Books = () => {
   const navigate = useNavigate();
   const [books, setBooks] = useState([]);
 
+  const fetchBooks = async () => {
+    try {
+      const res = await axios.get("http://localhost:5000/books");
+      console.log(res);
+      setBooks(res.data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   useEffect(() => {
-    const fetchBooks = async () => {
-      try {
-        const res = await axios.get("http://localhost:5000/books");
-        console.log(res);
-        setBooks(res.data);
-      } catch (err) {
-        console.log(err);
-      }
-    };
     fetchBooks();
   }, []);
 
@@ -31,7 +32,7 @@ const Books = () => {
               id={item.id}
               cover={item.cover}
               title={item.title}
-              description={item.description}
+              author={item.author}
               price={item.price}
             />
             

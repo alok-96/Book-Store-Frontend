@@ -19,7 +19,7 @@
 }
 
 .form-container {
-  width: 40vw;
+  width: 50vw;
   height: 80vh;
   padding: 30px;
   display: flex;
@@ -32,7 +32,7 @@
 }
 
 .input-field {
-  width: 30vw;
+  width: 40vw;
   padding: 10px;
   border-radius: 5px;
   outline: none;
@@ -86,6 +86,13 @@ img{
   object-fit: cover;
   background-color: #f8f8f8;
   border: 1px solid rgb(188, 185, 185);
+  filter: drop-shadow(0 0 0.25rem #cfc7c6);
+  transition: all 0.5s;
+  margin-top: 10px;
+}
+
+img:hover{
+  transform: scale(1.03);
 }
 
 .update, .delete{

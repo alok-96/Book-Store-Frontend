@@ -23,13 +23,13 @@ const BookCard = (props) => {
     <div className="book-card">
       {props.cover && <img src={props.cover} alt="Book_Image" />}
       <h3>{props.title}</h3>
-      <p>{props.description}</p>
-      <p>{props.price}</p>
+      <p>{props.author}</p>
+      <p>₹ <b>{props.price}</b>  </p>
       <div className="actions">
         <button
           className="update"
           onClick={() => {
-            navigate(`/update/${props.id}`);
+            navigate("/add", {state:{data:props}});
           }}
         >
           Update
